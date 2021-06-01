@@ -18,17 +18,22 @@ const [amount, setAmount] = useState()
 
 
 
-const handlerName = (event) =>{
+const handleName = (event) =>{
 /*------ PRINT -------*/
-console.log("name: ", event.targt.value);
-setName(event.targt.value);
+console.log("name: ", event.target.value);
+setName(event.target.value);
 
 }
 
-const handlerAmount = (event) =>{
+const handleAmount = (event) =>{
   /*------ PRINT -------*/
-  console.log("Amount: ", event.targt.value);
-  setAmount(event.targt.value);
+  console.log("Amount: ", event.target.value);
+  setAmount(event.target.value);
+}
+
+const handleSubmitForm = (event) =>{
+  event.preventDefault();
+
 }
 
 
@@ -50,7 +55,11 @@ const handlerAmount = (event) =>{
             </span>
           </p>
         </div>
-        <Form/>
+        <Form name={name}
+      amount={amount}
+  handleName={handleName}
+  handleAmount={handleAmount}
+  handleSubmitForm={handleSubmitForm}/>
         <List expenses={expenses} />
       </Jumbotron>
     </Container>
