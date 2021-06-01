@@ -33,7 +33,19 @@ const handleAmount = (event) =>{
 
 const handleSubmitForm = (event) =>{
   event.preventDefault();
+  if (name !== '' && amount > 0) {
+    // single expense object
+    const expense = { name, amount }
+    // do not override previous values in the array
+    // use spread operator to access previous values
+    setExpenses([...expenses, expense])
 
+    // clean input fields
+    setName('')
+    setAmount('')
+  } else {
+    console.log('Invalid expense name or the amount')
+  }
 }
 
 

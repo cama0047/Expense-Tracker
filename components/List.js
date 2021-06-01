@@ -5,8 +5,9 @@ import { ListGroup, ListGroupItem } from 'reactstrap'
 
 function List({expenses}) {
     return (
-        <div>
+        <div key={expenses.id}>
     <ListGroup>
+
       {expenses.map(item => (
         <ListGroupItem key={item.id}>
           {item.name} - $ {item.amount}
