@@ -69,7 +69,7 @@ useEffect(() => {
     <Container className='text-center'>
       <Jumbotron fluid>
         <h3 className='display-6'>
-          Expense Tracker React App
+          Expense Tracker
         </h3>
         <div>
           <p>

@@ -12,7 +12,7 @@ function Form({ name, amount, handleName, handleAmount, handleSubmitForm, handle
     return (
         <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
     <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+      <Label for='exampleEmail' sm={4}>
         Name of Expense
       </Label>
       <Col sm={4}>
@@ -27,8 +27,8 @@ function Form({ name, amount, handleName, handleAmount, handleSubmitForm, handle
       </Col>
     </FormGroup>
     <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
-        $ Amount
+      <Label for='exampleEmail' align="right" sm={4}>
+        Amount $
       </Label>
       <Col sm={4}>
         <Input
@@ -40,13 +40,16 @@ function Form({ name, amount, handleName, handleAmount, handleSubmitForm, handle
           onChange={handleAmount}
         />
       </Col>
-    </FormGroup>
+    </FormGroup >
+
+    <FormGroup >
     <Button type='submit' color='primary'>
       Add
     </Button>{' '}
     <Button type='submit' color='danger' onClick={handleClearAll}>
       Delete
     </Button>
+    </FormGroup>
   </BTForm>
 
     )
