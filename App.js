@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Button, Container } from 'reactstrap'
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
-  );
+    <Container style={{ marginTop: 20 }}>
+      <Button color='success'>Let's start</Button>
+    </Container>
+  )
 }
-
-export default App;
+export default App
