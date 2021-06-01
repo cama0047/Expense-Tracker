@@ -8,7 +8,7 @@ import {
   Button
 } from 'reactstrap'
 
-function Form({ name, amount, handleName, handleAmount, handleSubmitForm }) {
+function Form({ name, amount, handleName, handleAmount, handleSubmitForm, handleClearAll}) {
     return (
         <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
     <FormGroup className='row'>
@@ -43,6 +43,9 @@ function Form({ name, amount, handleName, handleAmount, handleSubmitForm }) {
     </FormGroup>
     <Button type='submit' color='primary'>
       Add
+    </Button>{' '}
+    <Button type='submit' color='danger' onClick={handleClearAll}>
+      Delete
     </Button>
   </BTForm>
 

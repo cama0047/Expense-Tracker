@@ -52,6 +52,11 @@ const handleSubmitForm = (event) =>{
     console.log('Invalid expense name or the amount')
   }
 }
+//Erase all Items
+const handleClearAll = () =>{
+setExpenses([]);
+
+}
 
 useEffect(() => {
   localStorage.setItem('expenses', JSON.stringify(expenses))
@@ -81,8 +86,12 @@ useEffect(() => {
       amount={amount}
   handleName={handleName}
   handleAmount={handleAmount}
-  handleSubmitForm={handleSubmitForm}/>
+  handleSubmitForm={handleSubmitForm}
+  handleClearAll = {handleClearAll}/>
         <List expenses={expenses} />
+
+
+
       </Jumbotron>
     </Container>
   
